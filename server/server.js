@@ -2,10 +2,11 @@ const httpServer = require('http').createServer()
 const io = require('socket.io')(httpServer, {
     cors: {
         //   origin: 'mongodb://admin:password@localhost:27017',
-        origin: [
-            'mongodb://mongo:27017/chatmongoose',
-            'myapp-react-client:3000',
-        ],
+        //  origin: [
+        //      'mongodb://mongo:27017/chatmongoose',
+        //      'myapp-react-client:3000',
+        //  ],
+        origin: 'http://localhost:3000',
         method: ['GET', 'POST'],
     },
 })
