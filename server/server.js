@@ -2,7 +2,7 @@ const httpServer = require('http').createServer()
 const io = require('socket.io')(httpServer, {
     cors: {
         //   origin: 'mongodb://admin:password@localhost:27017',
-        origin: 'mongodb://localhost:27017/chatmongoose',
+        origin: 'mongodb://mongo:27017/chatmongoose',
         method: ['GET', 'POST'],
     },
 })
@@ -35,7 +35,7 @@ let mailOptions = {
     text: 'It works',
 }
 
-const connectionString = 'mongodb://localhost:27017/chatmongoose'
+const connectionString = 'mongodb://mongo:27017/chatmongoose'
 //const connectionString = 'mongodb://admin:password@localhost:27017/chatmongoose'
 
 mongoose
