@@ -1,14 +1,9 @@
 const httpServer = require('http').createServer()
 const io = require('socket.io')(httpServer, {
     cors: {
-        //   origin: 'mongodb://admin:password@localhost:27017',
-        //  origin: [
-        //      'mongodb://mongo:27017/chatmongoose',
-        //      'myapp-react-client:3000',
-        //  ],
         origin: [
             'http://localhost:3000', //work on local
-            'http://143.110.187.73:3000', //work on server
+            'http://143.110.187.73:3000', //work on digitalocean server
         ],
         method: ['GET', 'POST'],
     },
