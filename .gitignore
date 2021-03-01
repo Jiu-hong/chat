@@ -8,6 +8,7 @@
 /client_bk
 /server_bk
 /client/node_modules
+/client/public/logo*
 /server/node_modules
 /server/bk
 # testing
