@@ -6,7 +6,7 @@ const io = require('socket.io')(httpServer, {
         //      'mongodb://mongo:27017/chatmongoose',
         //      'myapp-react-client:3000',
         //  ],
-        origin: 'http://localhost:3000',
+        origin: 'http://myapp-react-client:3000',
         method: ['GET', 'POST'],
     },
 })
