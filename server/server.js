@@ -1022,4 +1022,6 @@ http://localhost:3000/auth/resetpassword/${token}
     })
 })
 
-httpServer.listen(5000)
+httpServer.listen(5000, () => {
+    console.log('I am listening on port 5000')
+})
