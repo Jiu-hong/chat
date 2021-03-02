@@ -7,7 +7,7 @@ services:
             dockerfile: Dockerfile
         image: myapp-server
         container_name: myapp-node-server
-        command: /usr/src/app/node_modules/.bin/nodemon server.js
+        command: npm start
         # volumes:
         #     - ./server/:/usr/src/app
         #     - /usr/src/app/node_modules
