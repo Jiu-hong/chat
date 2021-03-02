@@ -53,7 +53,7 @@ mongoose
     })
     .then(
         () => console.log('mongoose connected successfully'),
-        (error) => console.log('Mongoose could not conenct to databse' + error)
+        (error) => console.log('Mongoose could not connect to databse' + error)
     )
 
 //io.on('connection', (socket) => {})
