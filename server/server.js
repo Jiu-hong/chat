@@ -9,13 +9,11 @@ const io = require('socket.io')(httpServer, {
         method: ['GET', 'POST'],
     },
 }) */
-
-const io = require('socket.io')(httpServer, {
-    cors: {
-        origin: ['*', /^http:\/\/143.110.187.73:3000/],
-        method: ['GET', 'POST'],
-    },
-})
+const options = {
+    cors: true,
+    origins: ['http://localhost:3000', 'http://143.110.187.73:3000'],
+}
+const io = require('socket.io')(httpServer, options)
 
 const crypto = require('crypto')
 const bcrypt = require('bcrypt')
