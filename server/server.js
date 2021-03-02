@@ -1,18 +1,13 @@
 const httpServer = require('http').createServer()
-/*
+
 const io = require('socket.io')(httpServer, {
     cors: {
-        origin: [
-            'http://localhost:3000', //work on local
-            'http://143.110.187.73:3000', //work on server
-        ],
+        origin: 'http://localhost:3000',
+
         method: ['GET', 'POST'],
     },
-}) */
-const options = {
-    cors: true,
-    origins: ['http://localhost:5000'],
-}
+})
+
 const io = require('socket.io')(httpServer, options)
 
 const crypto = require('crypto')
