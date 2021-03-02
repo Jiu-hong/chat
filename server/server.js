@@ -1,5 +1,4 @@
 const httpServer = require('http').createServer()
-var cors = require('cors')
 /*
 const io = require('socket.io')(httpServer, {
     cors: {
@@ -11,7 +10,13 @@ const io = require('socket.io')(httpServer, {
     },
 }) */
 
-const io = require('socket.io')(httpServer)
+const io = require('socket.io')(httpServer, {
+    cors: {
+        origin: 'http://143.110.187.73:3000', //work on server
+
+        method: ['GET', 'POST'],
+    },
+})
 
 const crypto = require('crypto')
 const bcrypt = require('bcrypt')
@@ -123,7 +128,7 @@ const addContactsToConversation = (
     })
 }
 
-io.on('connection', cors(), (socket) => {
+io.on('connection', (socket) => {
     socket.on('update-name', ({ id, name }) => {
         User.findOneAndUpdate(
             { email: id },
