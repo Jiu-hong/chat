@@ -1,10 +1,18 @@
 const httpServer = require('http').createServer()
+/*
 const io = require('socket.io')(httpServer, {
     cors: {
         origin: [
             'http://localhost:3000', //work on local
             'http://143.110.187.73:3000', //work on server
         ],
+        method: ['GET', 'POST'],
+    },
+}) */
+
+const io = require('socket.io')(httpServer, {
+    cors: {
+        origin: '*',
         method: ['GET', 'POST'],
     },
 })
