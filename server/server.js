@@ -11,7 +11,7 @@ const io = require('socket.io')(httpServer, {
 }) */
 const options = {
     cors: true,
-    origins: ['http://localhost:3000'],
+    origins: ['http://localhost:5000'],
 }
 const io = require('socket.io')(httpServer, options)
 
