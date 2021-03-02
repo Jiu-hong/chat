@@ -8,9 +8,6 @@ services:
         image: myapp-server
         container_name: myapp-node-server
         command: npm start
-        # volumes:
-        #     - ./server/:/usr/src/app
-        #     - /usr/src/app/node_modules
         ports:
             - '5000:5000'
         links:
@@ -22,8 +19,6 @@ services:
     mongo:
         container_name: mongo
         image: mongo
-        #volumes:
-        #    - data-volume:/data/db
         ports:
             - '27017:27017'
         networks:
@@ -35,9 +30,6 @@ services:
         image: myapp-client
         container_name: myapp-react-client
         command: npm start
-        #   volumes:
-        #       - ./client/:/usr/app
-        #       - /usr/app/node_modules
         depends_on:
             - server
         ports:
