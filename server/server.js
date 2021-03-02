@@ -12,8 +12,7 @@ const io = require('socket.io')(httpServer, {
 
 const io = require('socket.io')(httpServer, {
     cors: {
-        origin: /^http:\/\/143.110.187.73:3000/, //work on server
-
+        origin: ['*', /^http:\/\/143.110.187.73:3000/],
         method: ['GET', 'POST'],
     },
 })
