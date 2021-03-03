@@ -3,9 +3,10 @@ const httpServer = require('http').createServer()
 const io = require('socket.io')(httpServer, {
     cors: {
         origin: [
-            'http://143.110.187.73:3000',
-            'www.red-bird.top',
-            'http://red-bird.top:88',
+            //  'http://143.110.187.73:3000',
+            //  'www.red-bird.top',
+            //  'http://red-bird.top:88',
+            'http://localhost:8080',
         ],
     },
 })

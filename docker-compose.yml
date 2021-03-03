@@ -33,7 +33,7 @@ services:
         depends_on:
             - server
         ports:
-            - '88:3000'
+            - '8080:3000'
         networks:
             - app-network
 networks:
