@@ -11,7 +11,7 @@ export function SocketProvider({ id, children }) {
     const [socket, setSocket] = useState()
 
     useEffect(() => {
-        const newSocket = io('http://143.110.187.73:5000', { query: { id } })
+        const newSocket = io('http://red-bird.top:5000', { query: { id } })
 
         setSocket(newSocket)
 
