@@ -2,7 +2,7 @@ const httpServer = require('http').createServer()
 
 const io = require('socket.io')(httpServer, {
     cors: {
-        origin: 'http://192.168.2.105:3000',
+        origin: 'http://143.110.187.73:3000',
     },
 })
 
